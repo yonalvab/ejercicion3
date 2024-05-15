@@ -1,5 +1,6 @@
 import express from 'express'
 import loginRoute from './routes/userRoutes.js'
+import { PORT } from './config/config.js';
 
 const app = express()
 
@@ -11,6 +12,6 @@ app.get('/', (req, res) => {
 
 app.post('/login', loginRoute)
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Iniciado correctamente en http://localhost:3000')
 })
